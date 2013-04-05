@@ -17,4 +17,6 @@
 # limitations under the License.
 #
 
-include_recipe "mysql::client"
+puts "AAAAAA"
+
+# include_recipe "mysql::client"
