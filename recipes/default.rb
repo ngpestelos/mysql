@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
-puts "AAAAAA"
+passwords = Chef::EncryptedDataBagItem.load('passwords', 'mysql', 'secret.pem')
+mysql = passwords['mysql']
+Chef::Log.info("The mysql password is: '#{mysql}'")
 
 # include_recipe "mysql::client"
